@@ -51,7 +51,6 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.11.0</version>
 				<configuration>
 					<compilerArgs>
 						<!-- Disables use of shared symbol table which sometimes causes issues -->
