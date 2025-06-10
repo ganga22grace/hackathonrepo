@@ -5,11 +5,12 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.7-SNAPSHOT</version>
+		<version>3.2.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.hackathon</groupId>
 	<artifactId>myhackathonapp</artifactId>
+	<packaging>jar</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>myhackathonapp</name>
 	<description>Demo project for Spring Boot</description>
@@ -50,7 +51,15 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.11.0</version>
 				<configuration>
+					<compilerArgs>
+						<!-- Disables use of shared symbol table which sometimes causes issues -->
+						<arg>-XDuseUnsharedTable=true</arg>
+						<!-- Optional: forcibly disable any internal caching -->
+						<arg>-Xlint:all</arg>
+					</compilerArgs>
+<!--					<useIncrementalCompilation>false</useIncrementalCompilation>-->
 					<source>${java.version}</source>
 					<target>${java.version}</target>
 					<encoding>UTF-8</encoding>
