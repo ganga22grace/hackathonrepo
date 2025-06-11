@@ -62,6 +62,7 @@
 <!--					<useIncrementalCompilation>false</useIncrementalCompilation>-->
 					<source>${java.version}</source>
 					<target>${java.version}</target>
+					<release>17</release>
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
